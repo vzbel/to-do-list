@@ -3,3 +3,11 @@
 	margin: 0;
 	padding: 0;
 }
+
+.task-container{
+	display: flex;
+	background: lightseagreen;
+	border-radius: 10px;
+	padding: 10px 20px;
+	gap: 2rem;
+}
