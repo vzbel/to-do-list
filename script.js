@@ -25,7 +25,14 @@ function initializeEventListeners(){
 	// Handle task deletion button presses
 	taskList.addEventListener("click", function(event){
 		// Check if the target is the button or the contained icon
-		if(event.target.matches(".delete-task-button") || event.target.matches(".delete-task-button span")){
+		if(event.target.matches(".delete-task-button")){
+			// Get the parent, which is the task container
+			deleteTask(event.target.parentElement);
+		}else if(event.target.matches(".delete-task-button span")){
+			// Get the parent's parent 
+			// (The span's parrent is the button.
+			// The button's parent is the task container).
+			deleteTask(event.target.parentElement.parentElement);
 		}
 	});
 }
@@ -87,6 +94,8 @@ function markTaskAsCompleted(event){
 	}
 }
 
-function deleteTask(){
+function deleteTask(taskContainer){
+	// Remove the container from the DOM.
+	taskContainer.remove();
 }
 
