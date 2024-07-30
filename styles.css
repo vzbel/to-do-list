@@ -10,68 +10,79 @@
 	padding: 0;
 }
 
+/* Utility Classes */
+.flex{
+	display: flex;
+}
+/* Utility Classes End */
+
+/* General Classes */
+button, input{
+	border-style: none;
+}
+
 body{
 	/*	Display content on center */
-	display: flex;
 	align-items: center;
 	height: 100vh;
 
+	font-family: Helvetica, sans-serif;
+
 	background-color: var(--dark-color);
 	color: var(--light-color);
-	font-family: Helvetica, sans-serif;
 }
 
 main{
-	display: flex;
 	flex-direction: column;
 	gap: .4rem;
+
 	margin: 0 auto;
+	border-radius: 1rem;
 	padding: 1rem;
+	width: 40rem;
 
 	background-color: var(--mid-dark-color);
 	box-shadow: -5px 5px grey;
-	border-radius: 1rem;
-
-	width: 40rem;
 }
 
 button{
-	padding: .5rem;
-	border-radius: 5px;
-	color: white;
 	cursor: pointer;
-	border-style: none;
-	background-color: var(--mid-dark-color);
 	transition: 1s ease-in-out;
+
+	border-radius: 5px;
+	padding: .5rem;
+
+	background-color: var(--mid-dark-color);
+	color: white;
 }
 
 button:hover{
 	background-color: var(--light-color);
 	color: var(--dark-color);
 }
+/* General Classes End */
 
+/* Main Classes */
 .task-container, .task-form{
 	display: flex;
 	align-items: center;
+	gap: 1rem;
+
 	border-radius: 10px;
-	padding: 10px 20px;
+	padding: .5rem 1rem;
+	width: 100%;
 
 	background-color: var(--dark-color);
-	gap: 1rem;
-	width: 100%;
 }
 
 #task-input{
-	border-style: none;
-	background-color: var(--mid-dark-color);
 	flex-grow: 1;
+
 	border-radius: 5px;
 	padding: 1rem;
+
+	background-color: var(--mid-dark-color);
 	color: white;
 }
-
-.task-form label{
-	font-weight: bold;
-}
-
+/* Main Classes End */
 
